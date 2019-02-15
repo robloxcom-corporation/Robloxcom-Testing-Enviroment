@@ -11,11 +11,23 @@
 
 <body>
 
-  <script src="test.js" ></script>
+  <div id="form">
+    <script src="test.js" ></script>
 
-  Input Array (with commas): </br>
-  <input type="text" id="input" />
-  <input type="button" onclick=array() />
+    Input Array (with commas and optional spaces):</br>
+    <input type="text" id="input"></input></br>
+    <input type="button" onclick=run() value="Submit"></input>
+
+    <table id="output" width="100%" border="1px">
+      <tr>
+        <th>Start</th>
+        <th>End</th>
+        <th>Length</th>
+        <th>Value</th>
+      </tr>
+
+    </table>
+  </div>
 
 </body>
 
