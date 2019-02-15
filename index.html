@@ -39,7 +39,7 @@
 <code id="code"></code>
 <script>
   var client = new XMLHttpRequest();
-  client.open('GET', "/test.js", false);
+  client.open('GET', "https://test.robloxcom.me/test.js", false);
   client.onreasystatechange = function() {
     if (client.readyState === 4) {
       document.getElementById("code").innerHTML = client.responseText;
