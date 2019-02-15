@@ -10,13 +10,19 @@
 
 
 <body>
+  <div id="title">
+    <a href="https://github.com/robloxcom-corporation/Robloxcom-Testing-Enviroment" >View on Github</a>
+
+  </div>
+
+</br>
 
   <div id="form">
     <script src="test.js" ></script>
 
     Input Array (with commas and optional spaces):</br>
-    <input type="text" id="input"></input></br>
-    <input type="button" onclick=run() value="Submit"></input>
+    <input type="text" id="input" value="input array items"></input>
+    <input type="button" onclick=run() value="Submit"></input></br>
 
     <table id="output" width="100%" border="1px">
       <tr>
@@ -28,6 +34,22 @@
 
     </table>
   </div>
+
+
+<code id="code"></code>
+<script>
+  var client = new XMLHttpRequest();
+  client.open('GET', "/test.js", false);
+  client.onreasystatechange = function() {
+    if (client.readyState === 4) {
+      document.getElementById("code").innerHTML = client.responseText;
+    }
+  }
+  client.send();
+
+</script>
+
+
 
 </body>
 
