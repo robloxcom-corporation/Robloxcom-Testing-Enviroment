@@ -28,5 +28,5 @@ var reset = document.getElementById("reset");
 reset.onclick = function() {
   looping = false;
   context.clearRect(0, 0, canvas.width, canvas.height);
-  setup();
+  setup(document.getElementById("slider").value);
 }
