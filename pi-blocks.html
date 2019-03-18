@@ -13,9 +13,20 @@
 
   <body>
 
-    <canvas id="canvas" height="500px" width="500px" >not supported</canvas>
+    <canvas id="canvas" height="200px" width="500px" style="border:1px solid" >not supported</canvas>
+    <div>
+      <label id="display" for="input_slider" >0</label>
+      <input id="slider" type="range" name="input_slider" min="0" max="10" value="0" step="1" ></input>
+      <input id="start" type="button" value="Start"></input>
+      <input id="pause" type="button" value="Pause"></input>
+      <input id="reset" type="button" value="Reset"></input>
 
+    <div>
+
+    <script src="https://test.robloxcom.me/component.js" ></script>
+    <script src="pi-blocks/updateslider.js"></script>
     <script src="pi-blocks/main.js" ></script>
+    <script src="pi-blocks/interface.js"></script>
 
 
   </body>
