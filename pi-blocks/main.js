@@ -3,7 +3,7 @@ var blocks = [];
 var looping = false;
 var block1;
 var block2;
-var times = 100000;
+var times = 1;
 var cols = 0;
 
 const canvas = document.getElementById("canvas");
@@ -11,15 +11,22 @@ const context = canvas.getContext("2d");
 var slider = document.getElementById("slider");
 
 function setup(power, accuracy) {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  looping = false;
   cols = 0;
-  times = accuracy;
+  document.getElementById("cols").innerHTML = cols;
+  if (accuracy == "auto") {
+    times = Math.pow(10, power - 1);
+  } else {
+    times = accuracy;
+  };
   console.log(power);
   console.log(times);
 
   block1 = new Component(canvas.width * 5/6, canvas.height * 3/4, 40, 40, "rect");
   block1.color = "#33aaff";
   block1.vel = -1 / times;
-  block1.mass = Math.pow(10, power);
+  block1.mass = Math.pow(100, power);
 
   block2 = new Component(canvas.width * 1/3, canvas.height * 3/4 + 20, 20, 20, "rect");
   block2.color = "#33aaff";
@@ -89,12 +96,13 @@ function animate( timestamp ) {
     block1.step();
     block2.step();
 
-};
+  };
 
   block1.draw();
   block2.draw();
 
   if (looping) {
     window.requestAnimationFrame( animate );
-  }
+  };
+  
 };

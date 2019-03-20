@@ -32,7 +32,7 @@ var reset = document.getElementById("reset");
 reset.onclick = function() {
   looping = false;
   context.clearRect(0, 0, canvas.width, canvas.height);
-  setup(document.getElementById("pow_slider_display").value, document.getElementById("acc_slider_display").value);
+  setup(document.getElementById("pow_slider").value, document.getElementById("acc_slider").value);
 };
 
 
