@@ -65,7 +65,7 @@ function setup(power, accuracy) {
 
 };
 
-setup(0, 1);
+setup(2, 1);
 
 function animate( timestamp ) {
 
